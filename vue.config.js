@@ -1,0 +1,25 @@
+require('dotenv').config()
+
+const { WEBPACK_PORT} = process.env
+const publicPath = `https://localhost:${WEBPACK_PORT}`
+
+
+module.exports = {
+  publicPath,
+  configureWebpack: {
+    output: {
+      library: 'starterpackapp',
+      libraryTarget: 'umd'
+    }
+  },
+  chainWebpack: (config) => {
+    config.plugins.delete('html');
+    config.plugins.delete('preload');
+    config.plugins.delete('prefetch');
+    config.plugins.delete('splitChunks');
+  },
+  devServer: {
+    https: true,
+    port: WEBPACK_PORT,
+  },
+}

@@ -1,0 +1,2 @@
+(function(e,o){"object"===typeof exports&&"object"===typeof module?module.exports=o():"function"===typeof define&&define.amd?define([],o):"object"===typeof exports?exports["starterpack-app"]=o():e["starterpack-app"]=o()})(self,(()=>(()=>{var e={};return console.log(789),e})()));
+//# sourceMappingURL=app.7e5d08e5.js.map
